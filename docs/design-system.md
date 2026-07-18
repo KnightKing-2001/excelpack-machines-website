@@ -88,3 +88,31 @@
 - Modals → 2xl
 - Badges → full
 - Avatars → full
+
+## Shadows
+
+### Scale
+
+- none
+- xs
+- sm
+- md
+- lg
+- xl
+- 2xl
+- inner
+- focus
+
+### Component Shadows
+
+| Component         | Token       |
+| ----------------- | ----------- |
+| Button            | button      |
+| Button Hover      | buttonHover |
+| Card              | card        |
+| Card Hover        | cardHover   |
+| Dropdown          | dropdown    |
+| Modal             | modal       |
+| Navbar            | navbar      |
+| Tooltip           | tooltip     |
+| Floating Elements | floating    |
