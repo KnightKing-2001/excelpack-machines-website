@@ -27,3 +27,38 @@
 | Caption    | Labels & metadata  |
 | Button     | Button text        |
 | Label      | Form labels        |
+
+## Spacing
+
+### Base Scale
+
+| Token | Value |
+| ----- | ----- |
+| 0     | 0     |
+| 1     | 2px   |
+| 2     | 4px   |
+| 3     | 8px   |
+| ...   | ...   |
+| 17    | 192px |
+
+### Semantic Tokens
+
+- xs
+- sm
+- md
+- lg
+- xl
+- 2xl
+- 3xl
+- 4xl
+- 5xl
+
+### Layout Tokens
+
+- heroY
+- sectionY
+- cardPadding
+- formGap
+- gridGap
+- navbarHeight
+- footerPadding
