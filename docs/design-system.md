@@ -137,3 +137,29 @@
 | lg   | 1024px    |
 | xl   | 1280px    |
 | 2xl  | 1440px    |
+
+## Animation
+
+### Durations
+
+| Token   | Value |
+| ------- | ----- |
+| instant | 0ms   |
+| fast    | 150ms |
+| normal  | 250ms |
+| slow    | 350ms |
+| slower  | 500ms |
+
+### Standard Transitions
+
+- Button
+- Card
+- Modal
+- Drawer
+- Tooltip
+- Page
+
+### Hover Scale
+
+- Hover → 1.02
+- Active → 0.98
