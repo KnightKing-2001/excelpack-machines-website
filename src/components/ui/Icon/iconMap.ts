@@ -1,0 +1,31 @@
+import {
+  ArrowLeft,
+  ArrowRight,
+  Download,
+  Factory,
+  Mail,
+  MapPin,
+  Menu,
+  Package,
+  Phone,
+  Search,
+  Settings,
+  Upload,
+  X,
+} from "lucide-react";
+
+export const iconMap = {
+  menu: Menu,
+  close: X,
+  search: Search,
+  arrowRight: ArrowRight,
+  arrowLeft: ArrowLeft,
+  phone: Phone,
+  mail: Mail,
+  mapPin: MapPin,
+  factory: Factory,
+  package: Package,
+  settings: Settings,
+  download: Download,
+  upload: Upload,
+};
