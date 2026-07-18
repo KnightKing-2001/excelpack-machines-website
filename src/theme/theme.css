@@ -1,0 +1,13 @@
+:root {
+  --color-primary-600: #005bac;
+  --color-accent-500: #f47c20;
+
+  --space-md: 1rem;
+  --space-xl: 2rem;
+
+  --radius-lg: 0.75rem;
+
+  --shadow-md: 0 4px 8px rgba(15, 23, 42, 0.08);
+
+  --duration-normal: 250ms;
+}
