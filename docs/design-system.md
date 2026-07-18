@@ -62,3 +62,29 @@
 - gridGap
 - navbarHeight
 - footerPadding
+
+## Border Radius
+
+### Scale
+
+| Token | Value  |
+| ----- | ------ |
+| none  | 0      |
+| xs    | 2px    |
+| sm    | 4px    |
+| md    | 8px    |
+| lg    | 12px   |
+| xl    | 16px   |
+| 2xl   | 20px   |
+| 3xl   | 24px   |
+| full  | 9999px |
+
+### Component Usage
+
+- Button → md
+- Form Controls → md
+- Cards → xl
+- Images → xl
+- Modals → 2xl
+- Badges → full
+- Avatars → full
