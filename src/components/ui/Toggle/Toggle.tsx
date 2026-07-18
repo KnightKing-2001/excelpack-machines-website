@@ -87,9 +87,9 @@ export function Toggle({
 
               "after:absolute",
 
-              "after:left-[2px]",
+              "after:left-0.5",
 
-              "after:top-[2px]",
+              "after:top-0.5",
 
               "after:h-5",
 
