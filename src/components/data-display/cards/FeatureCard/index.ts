@@ -1,2 +1,2 @@
-export * from "./FeatureCard/FeatureCard";
-export * from "./FeatureCard/FeatureCard.types";
+export * from "./FeatureCard";
+export * from "./FeatureCard.types";
