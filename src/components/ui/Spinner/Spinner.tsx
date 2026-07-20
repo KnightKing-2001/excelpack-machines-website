@@ -16,13 +16,15 @@ const variantStyles = {
 export function Spinner({
   size = "md",
   variant = "primary",
+  label = "Loading",
   className = "",
   ...props
 }: SpinnerProps) {
   return (
     <div
       role="status"
-      aria-label="Loading"
+      aria-live="polite"
+      aria-label={label}
       className={[
         "inline-block animate-spin rounded-full",
         sizeStyles[size],
@@ -32,6 +34,8 @@ export function Spinner({
         .filter(Boolean)
         .join(" ")}
       {...props}
-    />
+    >
+      <span className="sr-only">{label}</span>
+    </div>
   );
 }
