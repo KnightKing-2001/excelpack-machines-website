@@ -1,47 +1,38 @@
 import type { GridProps } from "./Grid.types";
 
-const columnStyles = {
-  1: "grid-cols-1",
-
-  2: "grid-cols-1 md:grid-cols-2",
-
-  3: "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
-
-  4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
-
-  5: "grid-cols-1 md:grid-cols-3 lg:grid-cols-5",
-
-  6: "grid-cols-1 md:grid-cols-3 lg:grid-cols-6",
-};
-
 const gapStyles = {
   none: "gap-0",
-
-  sm: "gap-3",
-
-  md: "gap-6",
-
-  lg: "gap-8",
-
-  xl: "gap-12",
+  sm: "gap-2",
+  md: "gap-4",
+  lg: "gap-6",
+  xl: "gap-8",
 };
 
 export function Grid({
   children,
-
-  columns = 3,
-
+  columns = {
+    default: 1,
+  },
   gap = "md",
-
   className = "",
 }: GridProps) {
+  const columnClasses = [
+    columns.default ? `grid-cols-${columns.default}` : "",
+
+    columns.sm ? `sm:grid-cols-${columns.sm}` : "",
+
+    columns.md ? `md:grid-cols-${columns.md}` : "",
+
+    columns.lg ? `lg:grid-cols-${columns.lg}` : "",
+
+    columns.xl ? `xl:grid-cols-${columns.xl}` : "",
+
+    columns["2xl"] ? `2xl:grid-cols-${columns["2xl"]}` : "",
+  ];
+
   return (
     <div
-      className={["grid", columnStyles[columns], gapStyles[gap], className]
-
-        .filter(Boolean)
-
-        .join(" ")}
+      className={["grid", ...columnClasses, gapStyles[gap], className].filter(Boolean).join(" ")}
     >
       {children}
     </div>

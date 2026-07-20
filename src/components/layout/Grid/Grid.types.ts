@@ -1,15 +1,18 @@
 import type { ReactNode } from "react";
 
-export type GridColumns = 1 | 2 | 3 | 4 | 5 | 6;
-
-export type GridGap = "none" | "sm" | "md" | "lg" | "xl";
-
 export interface GridProps {
   children: ReactNode;
 
-  columns?: GridColumns;
+  columns?: {
+    default?: number;
+    sm?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+    "2xl"?: number;
+  };
 
-  gap?: GridGap;
+  gap?: "none" | "sm" | "md" | "lg" | "xl";
 
   className?: string;
 }
