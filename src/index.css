@@ -9,3 +9,13 @@ body {
   min-height: 100vh;
   font-family: Inter, system-ui, sans-serif;
 }
+/*
+  Accessibility Focus System
+  --------------------------
+  Visible focus indicator for keyboard navigation
+*/
+
+:focus-visible {
+  outline: 3px solid var(--color-primary-600);
+  outline-offset: 3px;
+}
