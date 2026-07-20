@@ -1,2 +1,3 @@
-export * from "./TeamMemberCard";
-export * from "./TeamMemberCard.types";
+export { TeamMemberCard } from "./TeamMemberCard";
+
+export type { TeamMemberCardProps } from "./TeamMemberCard.types";
