@@ -1,18 +1,19 @@
 import { Outlet } from "react-router-dom";
-// import Navbar from "../../components/layout/Navbar";
-// import Footer from "../../components/layout/Footer";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import { Footer, Navbar } from "@/components/navigation";
+
+import { navbarItems } from "@/constants/navigation";
 
 export default function MainLayout() {
   return (
     <>
-      <Navbar />
+      <Navbar items={navbarItems} />
+
       <main>
         <Outlet />
       </main>
-      <Footer />
+
+      <Footer columns={[]} />
     </>
   );
 }
