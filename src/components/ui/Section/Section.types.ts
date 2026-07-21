@@ -7,6 +7,8 @@ export type SectionBackground = "default" | "muted" | "dark" | "primary";
 export interface SectionProps {
   children: ReactNode;
 
+  id?: string;
+
   spacing?: SectionSpacing;
 
   background?: SectionBackground;

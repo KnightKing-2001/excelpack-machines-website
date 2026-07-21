@@ -1,5 +1,6 @@
-import { PageLayout, Section } from "@/components/layout";
+import { PageLayout } from "@/components/layout";
 import { Footer, Navbar } from "@/components/navigation";
+import { Section } from "@/components/ui";
 import { navbarItems } from "@/constants/navigation";
 
 export function Home() {

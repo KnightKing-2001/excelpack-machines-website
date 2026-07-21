@@ -18,6 +18,7 @@ const backgroundStyles = {
 
 export function Section({
   children,
+  id,
   spacing = "lg",
   background = "default",
   as: Component = "section",
@@ -25,6 +26,7 @@ export function Section({
 }: SectionProps) {
   return (
     <Component
+      id={id}
       className={[spacingStyles[spacing], backgroundStyles[background], className]
         .filter(Boolean)
         .join(" ")}
