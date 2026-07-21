@@ -1,30 +1,24 @@
 import { PageLayout, Section } from "@/components/layout";
-
 import { Footer, Navbar } from "@/components/navigation";
-
 import { navbarItems } from "@/constants/navigation";
 
 export function Home() {
   return (
     <PageLayout header={<Navbar items={navbarItems} />} footer={<Footer columns={[]} />}>
-      {/* Hero */}
-
+      {/* Hero Section */}
       <Section id="hero" spacing="xl">
         Homepage Hero Section
       </Section>
 
-      {/* Products */}
-
+      {/* Featured Products */}
       <Section id="products">Product Showcase</Section>
 
       {/* Industries */}
-
       <Section id="industries" background="muted">
         Industries Served
       </Section>
 
-      {/* CTA */}
-
+      {/* Call To Action */}
       <Section id="cta" background="primary">
         Contact CTA
       </Section>
