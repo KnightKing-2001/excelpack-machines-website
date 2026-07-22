@@ -1,3 +1,4 @@
+import { MobileNavbar } from "@/components/navigation/MobileNavbar";
 import { Navbar } from "@/components/navigation/Navbar";
 import { TopBar } from "@/components/navigation/TopBar";
 
@@ -17,7 +18,13 @@ export function Header(props: NavbarProps) {
         ctaHref={topBarData.cta.href}
       />
 
-      <Navbar {...props} />
+      {/* Desktop Navigation */}
+      <div className="hidden lg:block">
+        <Navbar {...props} />
+      </div>
+
+      {/* Mobile Navigation */}
+      <MobileNavbar {...props} />
     </>
   );
 }

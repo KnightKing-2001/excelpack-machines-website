@@ -1,16 +1,14 @@
+import { Menu } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import { MobileDrawer } from "@/components/navigation/MobileDrawer";
 
 import type { NavbarProps } from "./Navbar.types";
 
-export function Navbar({
-  logo,
+export function Navbar({ logo, items, ctaLabel, ctaHref }: NavbarProps) {
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  items,
-
-  ctaLabel,
-
-  ctaHref,
-}: NavbarProps) {
   return (
     <header
       className="
@@ -26,10 +24,10 @@ export function Navbar({
           mx-auto
           flex
           h-20
-          max-w-7xl
+          max-w-360
           items-center
           justify-between
-          px-6
+          px-4
         "
         aria-label="Main navigation"
       >
@@ -37,7 +35,7 @@ export function Navbar({
 
         <div>{logo}</div>
 
-        {/* Navigation Links */}
+        {/* Desktop Navigation Links */}
 
         <ul
           className="
@@ -52,7 +50,6 @@ export function Navbar({
               {item.href ? (
                 <Link
                   to={item.href}
-
                   className="
                     text-sm
                     font-medium
@@ -79,12 +76,11 @@ export function Navbar({
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* Desktop CTA */}
 
         {ctaLabel && (
           <Link
             to={ctaHref ?? "#"}
-
             className="
               hidden
               rounded-md
@@ -102,6 +98,32 @@ export function Navbar({
             {ctaLabel}
           </Link>
         )}
+
+        {/* Mobile Menu Button */}
+
+        <button
+          type="button"
+          onClick={() => setMobileOpen(true)}
+          aria-label="Open navigation menu"
+          className="
+            rounded-md
+            p-2
+            text-neutral-700
+            hover:bg-neutral-100
+            lg:hidden
+          "
+        >
+          <Menu size={28} />
+        </button>
+
+        {/* Mobile Drawer */}
+
+        <MobileDrawer
+          open={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+          items={items}
+          logo={logo}
+        />
       </nav>
     </header>
   );

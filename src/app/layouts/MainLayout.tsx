@@ -9,7 +9,11 @@ export default function MainLayout() {
     <>
       <Header
         logo={
-          <img src="/images/ExcelPack Logo.png" alt="Excelpack Machines" className="h-12 w-auto" />
+          <img
+            src="/images/ExcelPack Logo.jpeg"
+            alt="Excelpack Machines"
+            className="h-14 w-auto object-contain"
+          />
         }
         items={navbarItems}
       />
