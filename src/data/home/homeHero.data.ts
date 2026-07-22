@@ -1,35 +1,24 @@
-export interface HomeHeroData {
-  title: string;
-  subtitle: string;
-  description: string;
-  primaryButton: {
-    label: string;
-    href: string;
-  };
-  secondaryButton: {
-    label: string;
-    href: string;
-  };
-  backgroundImage: string;
-}
+export const homeHeroData = {
+  badge: "SMART PACKAGING TECHNOLOGY",
 
-export const homeHeroData: HomeHeroData = {
-  title: "Complete Packaging Automation Solutions",
-
-  subtitle: "Excelpack Machines Private Limited",
+  title: "Smart Machines. Complete Solutions. Built For Performance.",
 
   description:
-    "Manufacturing high-performance packaging machines engineered for speed, precision, reliability, and long-term industrial performance.",
+    "High performance packaging machines and automation solutions engineered for speed, precision, reliability, and long-term industrial performance.",
+
+  features: ["Advanced Technology", "Reliable Performance", "Low Maintenance", "Global Support"],
 
   primaryButton: {
     label: "Explore Machines",
-    href: "/products",
   },
 
   secondaryButton: {
-    label: "Request a Quote",
-    href: "/contact",
+    label: "Watch Video",
   },
 
-  backgroundImage: "/images/home/hero-banner.webp",
+  performance: {
+    value: "180",
+    unit: "PPM",
+    label: "High Speed Packaging",
+  },
 };

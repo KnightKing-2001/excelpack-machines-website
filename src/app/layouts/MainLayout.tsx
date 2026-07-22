@@ -1,13 +1,18 @@
 import { Outlet } from "react-router-dom";
 
-import { Footer, Navbar } from "@/components/navigation";
+import { Footer, Header } from "@/components/navigation";
 
 import { navbarItems } from "@/constants/navigation";
 
 export default function MainLayout() {
   return (
     <>
-      <Navbar items={navbarItems} />
+      <Header
+        logo={
+          <img src="/images/ExcelPack Logo.png" alt="Excelpack Machines" className="h-12 w-auto" />
+        }
+        items={navbarItems}
+      />
 
       <main>
         <Outlet />
