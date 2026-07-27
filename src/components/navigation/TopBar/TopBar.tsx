@@ -12,7 +12,7 @@ export function TopBar({ email, phone, location, language, ctaLabel, ctaHref }: 
           mx-auto
           flex
           h-10
-          max-w-7xl
+          max-w-screen-2xl
           items-center
           justify-between
           px-6

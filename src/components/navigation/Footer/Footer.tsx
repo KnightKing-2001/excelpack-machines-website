@@ -24,7 +24,7 @@ export function Footer({
       <div
         className="
           mx-auto
-          max-w-7xl
+          max-w-screen-2xl
           px-6
           py-14
         "
@@ -120,7 +120,7 @@ export function Footer({
 
                 target="_blank"
 
-                rel="noreferrer"
+                rel="noopener noreferrer"
 
                 aria-label={social.label}
 

@@ -2,9 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>excelpack-machines-website</title>
+
+    <!-- ── Security Headers (meta-tag equivalents) ─────────────────────── -->
+    <!-- Prevent clickjacking / iframe embedding -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <!-- Prevent MIME-type sniffing -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <!-- Referrer policy — don't leak URL to third parties -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Basic Content Security Policy -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self' https://ipapi.co;
+        frame-ancestors 'none';
+      "
+    />
+    <!-- Prevent XSS via IE compatibility mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- ── Favicon & Branding ──────────────────────────────────────────── -->
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
+
+    <!-- ── SEO ────────────────────────────────────────────────────────── -->
+    <title>ExcelPack Machines — High-Speed Packaging Machinery Manufacturer | India</title>
+    <meta
+      name="description"
+      content="ExcelPack Machines Private Limited — Leading manufacturer of VFFS packaging machines, 3-Servo & 2-Servo series, Pneumatic VFFS, and Special Purpose Machines. Based in Greater Noida, India. CE & ISO certified."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Excelpack Machines Private Limited" />
+
+    <!-- ── Open Graph ─────────────────────────────────────────────────── -->
+    <meta property="og:title" content="ExcelPack Machines — Packaging Machinery Manufacturer" />
+    <meta
+      property="og:description"
+      content="High-speed VFFS packaging machines. 3-Servo, 2-Servo, Pneumatic & SPM series. Factory direct pricing from Greater Noida, India."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- ── Preconnect for performance ─────────────────────────────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+    <!-- ── Sitemap ────────────────────────────────────────────────────── -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   </head>
   <body>
     <div id="root"></div>

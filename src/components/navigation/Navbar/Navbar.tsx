@@ -24,10 +24,10 @@ export function Navbar({ logo, items, ctaLabel, ctaHref }: NavbarProps) {
           mx-auto
           flex
           h-20
-          max-w-360
+          max-w-screen-2xl
           items-center
           justify-between
-          px-4
+          px-6
         "
         aria-label="Main navigation"
       >

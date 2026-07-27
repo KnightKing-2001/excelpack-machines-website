@@ -4,16 +4,16 @@ const sizeStyles = {
   sm: "max-w-[640px]",
   md: "max-w-[768px]",
   lg: "max-w-[1024px]",
-  xl: "max-w-[1280px]",
-  "2xl": "max-w-[1440px]",
+  xl: "max-w-screen-2xl",
+  "2xl": "max-w-full",
   full: "max-w-full",
 };
 
 const paddingStyles = {
   none: "",
-  sm: "px-4",
-  md: "px-6",
-  lg: "px-8",
+  sm: "px-6",
+  md: "px-8",
+  lg: "px-12",
 };
 
 export function Container({

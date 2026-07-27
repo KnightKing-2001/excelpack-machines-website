@@ -1,9 +1,9 @@
 export const topBarData = {
   email: "info@excelpackmachine.com",
 
-  phone: ["+91-9818177144", "+91-8527502214"],
+  phone: ["+91-8527502214"],
 
-  location: "Greater Noida, India",
+  location: "Noida, India",
 
   language: "EN",
 

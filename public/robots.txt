@@ -1,0 +1,18 @@
+# ExcelPack Machines — robots.txt
+# Tells search engine crawlers which pages to index
+
+# Allow all crawlers
+User-agent: *
+
+# Block admin portal from being indexed
+Disallow: /admin
+Disallow: /admin/
+
+# Block any internal or API paths
+Disallow: /api/
+
+# Allow everything else
+Allow: /
+
+# Sitemap location — submit this URL to Google Search Console
+Sitemap: https://www.excelpacks.com/sitemap.xml
