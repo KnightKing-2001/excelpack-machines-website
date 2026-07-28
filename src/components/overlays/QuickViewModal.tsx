@@ -1,7 +1,7 @@
 import { Modal } from "./Modal";
 import type { Product } from "@/data/products/products.data";
 import { useInquiryStore } from "@/lib/useInquiryStore";
-import { CheckCircle, ArrowRight, X } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface QuickViewModalProps {
@@ -15,16 +15,8 @@ export function QuickViewModal({ product, onClose }: QuickViewModalProps) {
   if (!product) return null;
 
   return (
-    <Modal open={Boolean(product)} onClose={onClose} size="xl">
-      <div className="relative">
-        <button
-          onClick={onClose}
-          className="absolute right-0 top-0 rounded-full bg-neutral-100 p-1.5 text-neutral-500 hover:bg-neutral-200"
-          aria-label="Close quick view modal"
-        >
-          <X className="h-5 w-5" />
-        </button>
-
+    <Modal open={Boolean(product)} onClose={onClose} size="xl" title={product.name}>
+      <div>
         <div className="grid gap-6 md:grid-cols-2">
           {/* Left Column Image */}
           <div className="flex flex-col items-center justify-center rounded-xl bg-neutral-900 p-6 text-white text-center">

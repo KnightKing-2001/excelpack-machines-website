@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal } from "./Modal";
 import { useInquiryStore } from "@/lib/useInquiryStore";
-import { Download, FileText, CheckCircle2, X } from "lucide-react";
+import { Download, FileText, CheckCircle2 } from "lucide-react";
 import { products } from "@/data/products/products.data";
 
 export function DownloadBrochureModal() {
@@ -43,15 +43,8 @@ export function DownloadBrochureModal() {
   };
 
   return (
-    <Modal open={brochureModalOpen} onClose={() => setBrochureModalOpen(false)} size="md">
-      <div className="relative">
-        <button
-          onClick={() => setBrochureModalOpen(false)}
-          className="absolute right-0 top-0 text-neutral-400 hover:text-neutral-700"
-          aria-label="Close modal"
-        >
-          <X className="h-5 w-5" />
-        </button>
+    <Modal open={brochureModalOpen} onClose={() => setBrochureModalOpen(false)} size="md" title="Download Technical Brochure">
+      <div>
 
         {downloaded ? (
           <div className="py-8 text-center">
