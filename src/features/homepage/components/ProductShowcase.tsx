@@ -31,8 +31,10 @@ function ProductCard({ product }: { product: Product }) {
       {/* Visual Header — gradient machine card */}
       <div className={`relative h-48 bg-gradient-to-br ${gradient} overflow-hidden`}>
         {/* Decorative rings */}
-        <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full border border-white/5" />
-        <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full border border-white/5" />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-2xl">
+          <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full border border-white/5" />
+          <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full border border-white/5" />
+        </div>
 
         {/* Speed badge top-left */}
         <div className="absolute left-4 top-4 flex items-center gap-1.5 rounded-full bg-orange-500/20 px-3 py-1 border border-orange-400/30">

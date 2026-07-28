@@ -15,4 +15,4 @@ Disallow: /api/
 Allow: /
 
 # Sitemap location — submit this URL to Google Search Console
-Sitemap: https://www.excelpacks.com/sitemap.xml
+Sitemap: https://www.excelpackmachine.com/sitemap.xml

@@ -57,13 +57,14 @@ export function MegaMenu({
             top-full
             z-50
             mt-4
-            w-180 
+            w-[min(720px,calc(100vw-2rem))]
             -translate-x-1/2
             rounded-lg
             border
             bg-white
             p-6
             shadow-lg
+            overflow-hidden
           "
 
           role="menu"
