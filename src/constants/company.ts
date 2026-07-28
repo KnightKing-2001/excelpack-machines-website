@@ -13,7 +13,7 @@ export const COMPANY = {
     secondary: import.meta.env.VITE_COMPANY_PHONE_SECONDARY ?? "+91-9810123457",
   },
   email: import.meta.env.VITE_COMPANY_EMAIL ?? "info@excelpackmachine.com",
-  whatsapp: import.meta.env.VITE_COMPANY_WHATSAPP ?? "919810123456",
+  whatsapp: import.meta.env.VITE_COMPANY_WHATSAPP ?? "918527502214",
   address: "A-12, Industrial Area, Greater Noida, Uttar Pradesh – 201306, India",
   location: "Greater Noida, U.P., India",
   website: "https://www.excelpackmachine.com",

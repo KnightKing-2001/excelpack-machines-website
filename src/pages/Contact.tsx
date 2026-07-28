@@ -2,6 +2,7 @@ import { useState } from "react";
 import { products } from "@/data/products/products.data";
 import { useInquiryStore } from "@/lib/useInquiryStore";
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, MessageSquare } from "lucide-react";
+import { sendAdminNotification, buildAdminNotificationParams } from "@/lib/useEmailService";
 
 export default function ContactPage() {
   const { addInquiry } = useInquiryStore();
@@ -21,10 +22,10 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    addInquiry({
-      ...formData,
-      type: "General Contact",
-    });
+    const id = addInquiry({ ...formData, type: "General Contact" });
+    sendAdminNotification(
+      buildAdminNotificationParams({ ...formData, id, type: "General Contact" })
+    );
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
   };

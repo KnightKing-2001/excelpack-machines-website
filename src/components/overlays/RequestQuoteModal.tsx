@@ -3,6 +3,7 @@ import { Modal } from "./Modal";
 import { products } from "@/data/products/products.data";
 import { useInquiryStore } from "@/lib/useInquiryStore";
 import { sanitizeFormData, isValidEmail, isValidPhone } from "@/lib/security";
+import { sendAdminNotification, buildAdminNotificationParams } from "@/lib/useEmailService";
 import { CheckCircle2, Send, AlertCircle } from "lucide-react";
 
 // Field max-length constraints
@@ -66,7 +67,11 @@ export function RequestQuoteModal() {
     e.preventDefault();
     if (!validate()) return;
     const safe = sanitizeFormData(formData, FIELD_LIMITS);
-    addInquiry({ ...safe, machineInterest: selectedMachineChoice, type: "Quote Request" });
+    const id = addInquiry({ ...safe, machineInterest: selectedMachineChoice, type: "Quote Request" });
+    // Fire-and-forget admin email notification
+    sendAdminNotification(
+      buildAdminNotificationParams({ ...safe, id, machineInterest: selectedMachineChoice, type: "Quote Request" })
+    );
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
