@@ -5,8 +5,8 @@ import { useVisitorStore, type VisitorSession } from "@/lib/useVisitorStore";
 import { products } from "@/data/products/products.data";
 import { sendClientQuotation } from "@/lib/useEmailService";
 import {
-  Users, FileText, TrendingUp, Search, Trash2, LogOut, Eye,
-  Globe, Monitor, Smartphone, Tablet, MapPin, RefreshCw, Activity,
+  FileText, TrendingUp, Search, Trash2, LogOut, Eye,
+  Globe, Monitor, Smartphone, Tablet, RefreshCw, Activity,
   Mail, Send, CheckCheck, Bell, StickyNote, Clock, ChevronDown,
   MailCheck, Layers, Link2, X, MessageCircle, Phone,
 } from "lucide-react";
@@ -438,7 +438,7 @@ function VisitorIntelligencePanel() {
 // ─── Main Admin Dashboard ─────────────────────────────────────────────────────
 
 export default function AdminDashboard() {
-  const { inquiries, updateStatus, deleteInquiry, markRead, markAllRead, unreadCount } = useInquiryStore();
+  const { inquiries, deleteInquiry, markRead, markAllRead, unreadCount } = useInquiryStore();
   const { logout, username } = useAdminAuth();
   const [activeTab, setActiveTab] = useState<"inquiries" | "visitors" | "analytics">("inquiries");
   const [search, setSearch] = useState("");

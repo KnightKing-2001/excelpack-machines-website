@@ -74,7 +74,7 @@ export async function sendAdminNotification(
     return { success: false, error: "EmailJS not configured" };
   }
   try {
-    await emailjs.send(SERVICE_ID, ADMIN_TMPL, params as Record<string, unknown>, PUBLIC_KEY);
+    await emailjs.send(SERVICE_ID, ADMIN_TMPL, params as unknown as Record<string, unknown>, PUBLIC_KEY);
     return { success: true };
   } catch (err) {
     console.error("[EmailJS] Admin notification failed:", err);
@@ -99,7 +99,7 @@ export async function sendClientQuotation(
     return { success: false, error: "EmailJS not configured. Add VITE_EMAILJS_* keys to .env" };
   }
   try {
-    await emailjs.send(SERVICE_ID, QUOTE_TMPL, params as Record<string, unknown>, PUBLIC_KEY);
+    await emailjs.send(SERVICE_ID, QUOTE_TMPL, params as unknown as Record<string, unknown>, PUBLIC_KEY);
     return { success: true };
   } catch (err) {
     console.error("[EmailJS] Quotation email failed:", err);

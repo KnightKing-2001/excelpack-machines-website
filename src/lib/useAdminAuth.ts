@@ -11,9 +11,9 @@
 
 import { create } from "zustand";
 
-// ── Read from .env (VITE_ prefix exposes to browser bundle via import.meta.env)
-const ADMIN_USER = import.meta.env.VITE_ADMIN_USER as string;
-const ADMIN_PASS = import.meta.env.VITE_ADMIN_PASS as string;
+// ── Read from .env with fallback to default credentials
+const ADMIN_USER = (import.meta.env.VITE_ADMIN_USER || "Abhishek") as string;
+const ADMIN_PASS = (import.meta.env.VITE_ADMIN_PASS || "Abhinav@1289") as string;
 
 // Brute-force lockout config
 const MAX_ATTEMPTS = 5;
